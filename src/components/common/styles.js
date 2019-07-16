@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
-import { Button, Input, Slider } from 'react-native-elements';
+import {
+  Button, Input, Slider, CheckBox,
+} from 'react-native-elements';
 
 export const Form = styled.View`
     width: 60%;
@@ -7,13 +9,13 @@ export const Form = styled.View`
 
 
 export const FormInput = styled(Input).attrs({
-  placeholderTextColor: 'rgba(255, 255, 255, 0.6)',
+  placeholderTextColor: 'rgba(255, 255, 255, 0.7)',
   borderBottomColor: '#59abb2',
   inputStyle: {
     textAlign: 'center',
     color: '#fff',
-    fontSize: 15,
     width: '100%',
+    fontSize: 13,
     paddingBottom: 2,
   },
 })`
@@ -50,9 +52,33 @@ export const FormLabel = styled.Text`
   font-weight: 300;
 `;
 
+export const FormField = styled.View`
+  margin-top: 20px;
+`;
+
+export const FormCheckBox = styled(CheckBox).attrs({
+  checkedColor: '#fff',
+  uncheckedColor: '#fff',
+  iconType: 'material',
+  checkedIcon: 'check-box',
+  uncheckedIcon: 'check-box-outline-blank',
+  containerStyle: {
+    backgroundColor: 0,
+    borderWidth: 0,
+    marginLeft: 0,
+    padding: 0,
+  },
+  textStyle: {
+    color: '#fff',
+    fontSize: 13,
+    fontWeight: '300',
+  },
+})`
+`;
+
 export const PageContainer = styled.View`
   background: #14465e;
   flex: 1;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `;
